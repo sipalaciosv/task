@@ -1,0 +1,132 @@
+:root{
+  --brand-1:#0d6efd;           
+  --brand-2:#6ea8fe;          
+  --ink:#2b2f38;               
+  --muted:#6c757d;             
+  --bg:#f6f8fb;                
+  --card:#ffffff;             
+  --ring: rgba(13,110,253,.18);
+  --radius:14px;
+  --shadow: 0 6px 24px rgba(19,33,68,.08), 0 2px 8px rgba(19,33,68,.06);
+}
+
+html,body{background:var(--bg); color:var(--ink);}
+.navbar-brand{font-weight:700; letter-spacing:.2px;}
+.navbar.is-gradient{
+  background: linear-gradient(135deg, var(--brand-1), #7b5bff);
+}
+.navbar.is-gradient .navbar-brand,
+.navbar.is-gradient .nav-link,
+.navbar.is-gradient .btn-outline-secondary,
+.navbar.is-gradient .btn-outline-danger{
+  color:#fff !important;
+  border-color: rgba(255,255,255,.45) !important;
+}
+.navbar.is-gradient .btn-outline-secondary:hover,
+.navbar.is-gradient .btn-outline-danger:hover{
+  background: rgba(255,255,255,.12);
+}
+
+.section-title{
+  display:flex; align-items:center; gap:.6rem;
+}
+.section-title .hint{
+  font-size:.875rem; color:#eef; background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.25); padding:.3rem .6rem; border-radius:999px;
+}
+
+.card{border:none; border-radius:var(--radius); box-shadow:var(--shadow); background:var(--card);}
+.card-header{background:transparent; font-weight:600; border-bottom:1px dashed rgba(0,0,0,.06);}
+
+.droptarget{
+  min-height: 120px;
+  border: 2px dashed transparent;
+  border-radius: calc(var(--radius) - 6px);
+  transition: background .15s ease, border-color .15s ease, transform .05s ease;
+}
+.droptarget.over{
+  border-color: var(--brand-1);
+  background: rgba(13,110,253,.06);
+  transform: scale(1.01);
+}
+.droptarget:empty::before{
+  content: "Suelta aquí…";
+  display:block; text-align:center; color: var(--muted);
+  padding: 18px 8px; font-size:.95rem;
+  opacity:.85;
+}
+
+.task-card[draggable="true"] { cursor: grab; }
+.task-card.dragging { opacity: .6; }
+
+.task-card{
+  border:1px solid rgba(0,0,0,.06);
+  border-left-width: 6px;
+  border-radius: calc(var(--radius) - 6px);
+}
+
+.task-card.state-pendiente{ border-left-color:#ffc107; }    
+.task-card.state-en_progreso{ border-left-color:#0d6efd; }   
+.task-card.state-completada{ border-left-color:#20c997; }    
+
+.task-card .task-title{ font-weight:700; letter-spacing:.2px; }
+.task-card .task-desc{ color: var(--muted); }
+.badge.text-bg-light{
+  background:#f1f4f9 !important; border-color:#e6eaf2 !important;
+}
+
+.task-card .btn-group .btn{
+  border-color:rgba(0,0,0,.12);
+}
+.task-card .btn-group .btn:hover{
+  background:#f7f9ff;
+}
+
+#statsArea .card{
+  background: linear-gradient(180deg,#ffffff, #f9fbff);
+}
+.stat-title{ color:#556; }
+.stat-value{ font-weight:800; letter-spacing:.5px; }
+
+.form-control:focus, .form-select:focus, .btn:focus{
+  box-shadow: 0 0 0 .2rem var(--ring) !important;
+  border-color: var(--brand-1) !important;
+}
+
+.auth-hero{
+  background:
+    radial-gradient(1200px 500px at -10% -20%, #7b5bff22, transparent 60%),
+    radial-gradient(900px 400px at 110% 10%, #0d6efd22, transparent 60%);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.nav-pills .nav-link{
+  border-radius: 999px;
+  padding:.55rem 1rem;
+  font-weight:600;
+}
+.nav-pills .nav-link.active{
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+}
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  background:#eef3ff; border:1px solid #dbe6ff; border-bottom-width:2px;
+  padding:.15rem .4rem; border-radius:6px; font-size:.8rem;
+}
+.stat-compact .card-body{
+  padding: 0.9rem 1.1rem;
+}
+.stat-compact .stat-title{
+  margin-bottom: .1rem;
+}
+.stat-compact .stat-sub{
+  color:#4b5563;            
+  font-weight: 600;
+}
+.stat-compact .stat-value{
+  font-weight: 700;
+  font-size: 1.4rem !important;
+  letter-spacing: .2px;
+}
