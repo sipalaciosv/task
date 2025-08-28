@@ -1,4 +1,4 @@
-# TaskApp (colaborativa)
+# TareaPorHacer (colaborativa)
 
 
 Aplicación web simple para gestión de tareas colaborativas, desarrollada con **JavaScript moderno**, **orientación a objetos**, **orientación a eventos**, **programación asíncrona** (carga inicial desde MockAPI), **Bootstrap 5**, **localStorage** y **drag & drop nativo** para mover tareas entre estados.
